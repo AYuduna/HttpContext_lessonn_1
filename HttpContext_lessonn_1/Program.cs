@@ -7,8 +7,8 @@ var app = builder.Build();
 
 
 ////1
-//app.UseWelcomePage();
-//app.Run();
+app.UseWelcomePage();
+app.Run();
 
 
 //2
@@ -138,24 +138,24 @@ var app = builder.Build();
 
 
 ////11
-app.Map("/", async context =>
-{
-    var response = context.Response;
-    response.ContentType = "text/html; charset=utf-8";
-    string path = "https://"+context.Request.Host + context.Request.Path;
-   
-    //await response.WriteAsync("<form action=\"http://localhost:5125/1\">\r\n <input type=\"submit\" value=\"Goto page1\"/>\r\n</form>");
-    //await response.WriteAsync("<form action=\"http://localhost:5125/1\">\r\n <button type=\"submit\">Goto page1</button>\r\n</form>");
-    path = path+"1";
-    await response.WriteAsync($"<form action= {path} method = \"POST\">\r\n <input type=\"submit\" value=\"Goto page1\"/>\r\n</form>");
-});
+//app.Map("/", async context =>
+//{
+//    var response = context.Response;
+//    response.ContentType = "text/html; charset=utf-8";
+//    string path = "https://"+context.Request.Host + context.Request.Path;
 
-app.Map("/1", async context =>
-{
-    var response = context.Response;
-    response.Headers.ContentType = "text/plain;charset=utf-8";
-    await response.WriteAsync("Страница 1");
-});
+//    //await response.WriteAsync("<form action=\"http://localhost:5125/1\">\r\n <input type=\"submit\" value=\"Goto page1\"/>\r\n</form>");
+//    //await response.WriteAsync("<form action=\"http://localhost:5125/1\">\r\n <button type=\"submit\">Goto page1</button>\r\n</form>");
+//    path = path+"1";
+//    await response.WriteAsync($"<form action= {path} method = \"POST\">\r\n <input type=\"submit\" value=\"Goto page1\"/>\r\n</form>");
+//});
+
+//app.Map("/1", async context =>
+//{
+//    var response = context.Response;
+//    response.Headers.ContentType = "text/plain;charset=utf-8";
+//    await response.WriteAsync("Страница 1");
+//});
 
 
 app.Run(); 
