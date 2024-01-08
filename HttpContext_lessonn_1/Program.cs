@@ -142,10 +142,9 @@ app.Run();
 //{
 //    var response = context.Response;
 //    response.ContentType = "text/html; charset=utf-8";
-//    string path = "https://"+context.Request.Host + context.Request.Path;
-
 //    //await response.WriteAsync("<form action=\"http://localhost:5125/1\">\r\n <input type=\"submit\" value=\"Goto page1\"/>\r\n</form>");
 //    //await response.WriteAsync("<form action=\"http://localhost:5125/1\">\r\n <button type=\"submit\">Goto page1</button>\r\n</form>");
+//    string path = "https://"+context.Request.Host + context.Request.Path;
 //    path = path+"1";
 //    await response.WriteAsync($"<form action= {path} method = \"POST\">\r\n <input type=\"submit\" value=\"Goto page1\"/>\r\n</form>");
 //});
